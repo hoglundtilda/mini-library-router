@@ -1,7 +1,7 @@
 <template>
   <div>
     <main class="books">
-        <book :book="book" v-for="(book, index) in books" :key="index"/>
+      <book :book="book" v-for="(book, index) in books" :key="index" />
     </main>
   </div>
 </template>
@@ -36,9 +36,6 @@ export default {
       if (this.bookCart[index] != book) {
         this.bookCart.push(book);
       }
-    },
-    remove(index) {
-      this.bookCart.splice(index, 1);
     }
   }
 };

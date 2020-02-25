@@ -54,8 +54,8 @@ export default {
   //filtrerar ut ett object från books: Array genom book.id som skickats som param genom route.push från book.vue
   computed: {
     book() {
-      return this.books.filter(book => book.id == this.$route.params.book)[0]
-    },
+      return this.books.filter(book => book.id == this.$route.params.book)[0];
+    }
   },
   watch: {
     cart() {
@@ -71,19 +71,19 @@ export default {
   },
   methods: {
     add(book) {
-        this.cart = JSON.parse(localStorage.getItem("wishList"));
+      this.cart = JSON.parse(localStorage.getItem("wishList"));
 
-        if(this.cart.indexOf(book) === -1) {
+      if (this.cart.indexOf(book) === -1) {
         this.cart.push(book);
         localStorage.setItem("wishList", JSON.stringify(this.cart));
         this.display = true;
-        }
+      }
     },
     back() {
-      this.$router.push('/')
+      this.$router.push("/");
     },
     wishList() {
-      this.$router.push('/wishList')
+      this.$router.push("/wishList");
     }
   }
 };
@@ -145,18 +145,6 @@ p {
   padding-bottom: 0.5rem;
   justify-content: flex-end;
 }
-.counter {
-  font-size: 1.2rem;
-  background: red;
-  border-radius: 100%;
-  width: 20px;
-  height: 20px;
-  font-family: roboto;
-  font-weight: 600;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 .content {
   grid-area: cover;
   font-size: 1.2rem;
@@ -187,9 +175,9 @@ p {
 }
 
 .book-info {
+  grid-area: info;
   margin-left: 2rem;
   max-width: 460px;
-  grid-area: info;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
