@@ -1,4 +1,7 @@
-# mini-library-routing
+# Mini Library
+
+- Show info of a book in the library
+- Add/Remove book from Wishlist
 
 ## Project setup
 ```
