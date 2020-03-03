@@ -1,7 +1,9 @@
 <template>
   <div>
     <main class="books">
-      <book :book="book" v-for="(book, index) in books" :key="index" />
+      <div class="container">
+        <book :book="book" v-for="(book, index) in books" :key="index" />
+      </div>
     </main>
   </div>
 </template>
@@ -42,10 +44,16 @@ export default {
 </script>
 
 <style>
+.container {
+  width: 80%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
 .books {
   display: flex;
   width: 100%;
-  flex-flow: row wrap;
   justify-content: center;
 }
 
