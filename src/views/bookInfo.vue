@@ -54,7 +54,8 @@ export default {
   //filtrerar ut ett object från books: Array genom book.id som skickats som param genom route.push från book.vue
   computed: {
     book() {
-      return this.books.filter(book => book.id == this.$route.params.book)[0];
+      return this.$store.state.book;
+      //return this.books.filter(book => book.id == this.$route.params.book)[0];
     }
   },
   watch: {

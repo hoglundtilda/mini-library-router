@@ -1,8 +1,8 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import books from "../views/books";
-import wishList from "../views/wishList"
-import bookInfo from "../views/bookInfo"
+import wishList from "../views/wishList";
+import bookInfo from "../views/bookInfo";
 
 Vue.use(VueRouter);
 
@@ -13,7 +13,7 @@ const routes = [
     component: books
   },
   {
-    path: "/bookInfo/:book",
+    path: "/bookInfo",
     name: "bookInfo",
     component: bookInfo
   },
@@ -21,7 +21,7 @@ const routes = [
     path: "/wishList",
     name: "wishList",
     component: wishList
-  },
+  }
 ];
 
 const router = new VueRouter({

@@ -1,5 +1,5 @@
 <template>
-  <div @click="bookInfo">
+  <div @click="bookInfo(book)">
     <article class="book" :style="{ backgroundColor: color }">
       <section class="bg"></section>
       <section class="content">
@@ -31,9 +31,12 @@ export default {
     }
   },
   methods: {
-    bookInfo() {
+    bookInfo(book) {
       // skicka bokens id, param i bookInfo
-      this.$router.push("/bookInfo/"+this.book.id);
+      console.log(book);
+
+      this.$store.commit("bookInfo", book);
+      this.$router.push("/bookInfo");
     }
   }
 };
